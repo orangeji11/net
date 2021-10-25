@@ -14,19 +14,24 @@ type iovec struct {
 type msghdr struct {
 	Name       *byte
 	Namelen    uint32
-	Pad_cgo_0  [4]byte
 	Iov        *iovec
 	Iovlen     uint64
 	Control    *byte
 	Controllen uint64
 	Flags      int32
-	Pad_cgo_1  [4]byte
+	Pad_cgo_0  [4]byte
 }
 
 type mmsghdr struct {
 	Hdr       msghdr
 	Len       uint32
 	Pad_cgo_0 [4]byte
+}
+
+type cmsghdr struct {
+	Len   uint64
+	Level int32
+	Type  int32
 }
 
 const (
