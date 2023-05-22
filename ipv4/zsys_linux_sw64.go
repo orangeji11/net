@@ -1,6 +1,9 @@
 // Created by cgo -godefs - DO NOT EDIT
 // cgo -godefs defs_linux.go
 
+//go:build sw64
+// +build sw64
+
 package ipv4
 
 const (
